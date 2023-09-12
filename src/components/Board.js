@@ -71,9 +71,9 @@ const Board = () => {
 
     return (
         <div>
-            <p>{JSON.stringify(gameOver)}</p>
-            <Timer />
-            {/* <p>{nonMineCount}</p> */}
+            {/* <p>{JSON.stringify(gameOver)}</p> */}
+            {/* <Timer /> */}
+            <p className="nonMinesCount">Non-Mines - {nonMineCount}</p>
             <div style={{
                 display: "flex",
                 flexDirection: "column",
@@ -95,12 +95,6 @@ const Board = () => {
                 ) 
                 })}
             </div>
-            <button 
-                onClick={freshBoard}
-                className="restartBtn"
-            >
-            Restart game
-            </button> 
         </div>
     ); 
 };

@@ -42,7 +42,7 @@ export default (row, col, bombs) => {
         if (roww > 0 && board[roww - 1][coll].value === "X") {
           board[roww][coll].value++;
         }
-  
+        
         // Top Right
         if (
           roww > 0 &&
@@ -92,7 +92,7 @@ export default (row, col, bombs) => {
       }
     }
     return { board, mineLocation };
-  };
+};
 
   function randomNum(min = 0, max) {
     // min and max included

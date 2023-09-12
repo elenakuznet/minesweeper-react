@@ -4,7 +4,7 @@ import Board from './components/Board';
 function App() {
   return (
     <div className="App">
-      <h1>Minesweeper</h1>
+      <h1 className='app__title'>Minesweeper</h1>
       <Board />
     </div>
   );
