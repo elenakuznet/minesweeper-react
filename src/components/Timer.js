@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 let timeIntervalId;
 export default function Timer({ gameOver, sendTime }) {
-    let [time, setTime] = useState(0);
+    let [time, setTime] = useState(10);
     
     useEffect(() => {
     function incrementTime() {
         setTimeout(() => {
-        let newTime = time + 1;
+        let newTime = time - 1;
         setTime(newTime);
-    }, 1000);
+    }, 60000);
     }
     incrementTime();
 }, [time]);

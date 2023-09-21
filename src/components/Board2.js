@@ -4,7 +4,7 @@ import { revealed } from "../util/reveal";
 import Cell from "./Cell";
 import Timer from "./Timer";
 
-const Board = () => {
+const Board2 = () => {
     const [grid, setGrid] = useState([]);
     const [nonMineCount, setNonMineCount] = useState(0);
     const [mineLocation, setMineLocations] = useState([]);
@@ -26,8 +26,8 @@ const Board = () => {
     }, []);
 
     const freshBoard = () => {
-        const newBoard = createBoard(8, 8, 10);
-        setNonMineCount(8 * 8 - 10);
+        const newBoard = createBoard(16, 16, 40);
+        setNonMineCount(16 * 16 - 40);
         setMineLocations(newBoard.mineLocation);
         setGrid(newBoard.board);
     };
@@ -72,7 +72,7 @@ const Board = () => {
     return (
         <div>
             {/* <p>{JSON.stringify(gameOver)}</p> */}
-            <Timer />
+            {/* <Timer /> */}
             <p className="nonMinesCount">Non-Mines - {nonMineCount}</p>
             <div style={{
                 display: "flex",
@@ -99,4 +99,4 @@ const Board = () => {
     ); 
 };
 
-export default Board;
+export default Board2;
